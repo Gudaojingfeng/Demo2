@@ -1,4 +1,4 @@
-import  Reactimport { Component } from "react";
+import  React , { Component } from "react";
  import React,{Component}  from 'react'; 
 
 export default class Index1 extends Component{
