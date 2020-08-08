@@ -10,7 +10,7 @@ import { Login } from "../../api/account";
 // 组件
 import Code from "../../components/auth/AuthCode";
 // 加密
-//import CryptoJs from 'crypto-js';
+import CryptoJs from 'crypto-js';
 // 方法
 //import { setToken, setUsername } from "../../utils/cookies"
 class LoginForm extends Component{
@@ -29,7 +29,7 @@ class LoginForm extends Component{
         const requestData = {
             username: this.state.username,
             code: this.state.code,
-            //password: CryptoJs.MD5(this.state.password).toString(),
+            password: CryptoJs.MD5(this.state.password).toString(),
         }
         this.setState({
             loading: true

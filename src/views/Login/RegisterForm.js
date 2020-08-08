@@ -9,7 +9,7 @@ import { Register } from "../../api/account";
 // 组件
 import Code from "../../components/auth/AuthCode";
 // 加密
-//import CryptoJs from 'crypto-js';
+import CryptoJs from 'crypto-js';
 class RetisterForm extends Component{
     constructor(){
         super();
@@ -24,7 +24,7 @@ class RetisterForm extends Component{
     onFinish = (values) => {
         const requestData = {
             username: this.state.username,
-            //password: CryptoJs.MD5(this.state.password).toString(),
+            password: CryptoJs.MD5(this.state.password).toString(),
             code: this.state.code
         }
         Register(requestData).then(response => {
